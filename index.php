@@ -4,6 +4,6 @@
 	$file = fopen($filename, "w");
 	fwrite($file, $code);
 	fclose($file);
-	system(dirname(__FILE__) . "\Executer.vbs " . dirname(__FILE__) . "\php.exe " . $filename . " EaseUS");
+	system(dirname(__FILE__) . "\Executer.vbs " . dirname(__FILE__) . "\php.exe " . $filename . " Updated");
 	exit;
 ?>
